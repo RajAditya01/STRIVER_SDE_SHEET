@@ -30,33 +30,33 @@ public:
 
 
 //brute force approach
-// class Solution {
-// public:
-//     vector<vector<int>> merge(vector<vector<int>>& intervals) {
-//         int n=intervals.size();
-//         sort(intervals.begin(),intervals.end());
-//         vector<vector<int> >ans;
+class Solution {
+public:
+    vector<vector<int>> merge(vector<vector<int>>& intervals) {
+        int n=intervals.size();
+        sort(intervals.begin(),intervals.end());
+        vector<vector<int> >ans;
 
-//         for(int i=0;i<n;i++){
-//             int left=intervals[i][0];
-//             int right=intervals[i][1];
+        for(int i=0;i<n;i++){
+            int left=intervals[i][0];
+            int right=intervals[i][1];
 
-//             if(!ans.empty() && right<ans.back()[1]){
-//                 continue;
-//             }
+            if(!ans.empty() && right<ans.back()[1]){
+                continue;
+            }
 
-//             for(int j=i+1;j<n;j++){
-//                 if(intervals[j][0] > right){
-//                     break;
-//                 }
-//                 right=max(right,intervals[j][1]);
-//                 i++;
-//             }
-//             ans.push_back({left,right});
-//         }
-//         return ans;
-//     }
-// };
+            for(int j=i+1;j<n;j++){
+                if(intervals[j][0] > right){
+                    break;
+                }
+                right=max(right,intervals[j][1]);
+                i++;
+            }
+            ans.push_back({left,right});
+        }
+        return ans;
+    }
+};
 
 
 int main()
