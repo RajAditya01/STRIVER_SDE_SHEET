@@ -31,41 +31,41 @@ public:
 
 
 //using stl map
-// class Solution {
-// public:
-//     int findDuplicate(vector<int>& nums) {
-//         map<int,int>m;
-//         for(auto nu:nums){
-//             m[nu]++;
-//         }
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        map<int,int>m;
+        for(auto nu:nums){
+            m[nu]++;
+        }
 
-//         for(auto a:m){
-//             if(a.second>1){
-//                 return a.first;
-//             }
-//         }
+        for(auto a:m){
+            if(a.second>1){
+                return a.first;
+            }
+        }
 
-//         return nums[0];
-//     }
-// };
+        return nums[0];
+    }
+};
 
 
 
 
 //using sorting
-// class Solution {
-// public:
-//     int findDuplicate(vector<int>& nums) {
-//         int n = nums.size();
-//         sort(nums.begin(), nums.end());
-//         for (int i = 0; i < n - 1; i++) {
-//             if (nums[i] == nums[i + 1]) {
-//             return nums[i];
-//             }
-//         }
-//         return 0;
-//     }
-// };
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        int n = nums.size();
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < n - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+            return nums[i];
+            }
+        }
+        return 0;
+    }
+};
 
 
 int main() {
