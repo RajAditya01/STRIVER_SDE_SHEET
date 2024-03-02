@@ -27,48 +27,48 @@ void sortColors(vector<int> &A) {
 };
 
 //using concept of Dutch National flag algorithm
-// void sortColors(vector<int>& arr) {
-//     int n=arr.size();
-//     int low = 0, mid = 0, high = n - 1;
+void sortColors(vector<int>& arr) {
+    int n=arr.size();
+    int low = 0, mid = 0, high = n - 1;
 
-//     while (mid <= high) {
-//         if (arr[mid] == 0) {
-//             swap(arr[low], arr[mid]);
-//             low++;
-//             mid++;
-//         }
-//         else if (arr[mid] == 1) {
-//             mid++;
-//         }
-//         else {
-//             swap(arr[mid], arr[high]);
-//             high--;
-//         }
-//     }
-// }
-// };
+    while (mid <= high) {
+        if (arr[mid] == 0) {
+            swap(arr[low], arr[mid]);
+            low++;
+            mid++;
+        }
+        else if (arr[mid] == 1) {
+            mid++;
+        }
+        else {
+            swap(arr[mid], arr[high]);
+            high--;
+        }
+    }
+}
+};
 
 
 
 // //using quick sort
-// int partition(vector<int>& v,int low,int high){
-//     int index=low-1;
-//     int pivot=high;
-//     while(low<=high){
-//         if(v[low]<v[pivot]){
-//             index++;
-//             int temp=v[low];
-//             v[low]=v[index];
-//             v[index]=temp;
-//         }
-//         low++;
-//     }
-//     index++;
-//     int temp=v[index];
-//     v[index]=v[high];
-//     v[high]=temp;
-//     return index;
-// }
+int partition(vector<int>& v,int low,int high){
+    int index=low-1;
+    int pivot=high;
+    while(low<=high){
+        if(v[low]<v[pivot]){
+            index++;
+            int temp=v[low];
+            v[low]=v[index];
+            v[index]=temp;
+        }
+        low++;
+    }
+    index++;
+    int temp=v[index];
+    v[index]=v[high];
+    v[high]=temp;
+    return index;
+}
 
 // void mergee(vector<int>& nums,int low ,int high){
 //     if(low<high){
