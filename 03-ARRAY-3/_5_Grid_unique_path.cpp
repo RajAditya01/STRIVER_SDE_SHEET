@@ -10,21 +10,21 @@
 class Solution {
 public:
     //Brute force solution using recursion which take excess amount of time
-    // int county(int m,int n,int rm,int rn){
-    //     if(m>rm || n>rn){
-    //         return 0;
-    //     }
+    int county(int m,int n,int rm,int rn){
+        if(m>rm || n>rn){
+            return 0;
+        }
 
-    //     if(m==rm && n==rn){
-    //         return 1;
-    //     }
+        if(m==rm && n==rn){
+            return 1;
+        }
 
-    //     return (county(m+1,n,rm,rn) + county(m,n+1,rm,rn) );
-    // }
+        return (county(m+1,n,rm,rn) + county(m,n+1,rm,rn) );
+    }
 
-    // int uniquePaths(int m, int n) {
-    //     return county(0,0,m-1,n-1);
-    // }
+    int uniquePaths(int m, int n) {
+        return county(0,0,m-1,n-1);
+    }
 
 
     //better approach using dynamic programming
