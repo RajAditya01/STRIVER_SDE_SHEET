@@ -28,23 +28,23 @@ public:
 
 
     //better approach using dynamic programming
-    // int county(int m,int n,int rm,int rn,vector<vector<int>>&dp){
-    //     if(m>rm || n>rn){
-    //         return 0;
-    //     }
+    int county(int m,int n,int rm,int rn,vector<vector<int>>&dp){
+        if(m>rm || n>rn){
+            return 0;
+        }
 
-    //     if(m==rm && n==rn){
-    //         return 1;
-    //     }
-    //     if(dp[m][n]!=-1){return dp[m][n];}
-    //     dp[m][n]=(county(m+1,n,rm,rn,dp) + county(m,n+1,rm,rn,dp) );
-    //     return dp[m][n];
-    // }
+        if(m==rm && n==rn){
+            return 1;
+        }
+        if(dp[m][n]!=-1){return dp[m][n];}
+        dp[m][n]=(county(m+1,n,rm,rn,dp) + county(m,n+1,rm,rn,dp) );
+        return dp[m][n];
+    }
 
-    // int uniquePaths(int m, int n) {
-    //     vector<vector<int>>dp(m,vector<int>(n,-1));
-    //     return county(0,0,m-1,n-1,dp);
-    // }
+    int uniquePaths(int m, int n) {
+        vector<vector<int>>dp(m,vector<int>(n,-1));
+        return county(0,0,m-1,n-1,dp);
+    }
 
 
     //using Combination formula
