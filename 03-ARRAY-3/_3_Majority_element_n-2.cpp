@@ -26,15 +26,15 @@ class Solution{
 
         //using map
         // map<int,int>m;
-        // for(int i=0;i<nums.size();i++){
-        //     m[nums[i]]++;
-        // }
-        // for(auto a:m){
-        //     if(a.second>nums.size()/2){
-        //         return a.first;
-        //     }
-        // }
-        // return 0;
+        for(int i=0;i<nums.size();i++){
+            m[nums[i]]++;
+        }
+        for(auto a:m){
+            if(a.second>nums.size()/2){
+                return a.first;
+            }
+        }
+        return 0;
 
 
         //Optimised Solution
