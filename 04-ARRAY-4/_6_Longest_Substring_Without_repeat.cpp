@@ -34,24 +34,24 @@ public:
 
 
 //Brute force O(n^2)
-// class Solution {
-// public:
-//     int lengthOfLongestSubstring(string s) {
-//         int count=0;
-//         int n=s.length();
-//         for(int i=0;i<n;i++){
-//             set<char>ss;
-//             int county=0;
-//             for(int j=i;j<n;j++){
-//                 if(ss.find(s[j])!=ss.end()){
-//                     break;
-//                 }
-//                 ss.insert(s[j]);
-//                 county++;
-//             }
-//             count=max(count,county);
-//         }
-//         return count;
-//     }
-// };
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int count=0;
+        int n=s.length();
+        for(int i=0;i<n;i++){
+            set<char>ss;
+            int county=0;
+            for(int j=i;j<n;j++){
+                if(ss.find(s[j])!=ss.end()){
+                    break;
+                }
+                ss.insert(s[j]);
+                county++;
+            }
+            count=max(count,county);
+        }
+        return count;
+    }
+};
 
