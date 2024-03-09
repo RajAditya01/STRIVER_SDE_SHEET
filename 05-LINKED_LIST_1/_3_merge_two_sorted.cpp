@@ -47,23 +47,23 @@ public:
 
 
         //using stl and vector
-        // vector<int> vec;
-        // while(list1) {
-        //     vec.push_back(list1->val);
-        //     list1=list1->next;
-        // }
-        // while(list2) {
-        //     vec.push_back(list2->val);
-        //     list2=list2->next;
-        // }
-        // sort(vec.begin(),vec.end());
-        // ListNode* result=new ListNode(-1);
-        // ListNode* temp=result;
+        vector<int> vec;
+        while(list1) {
+            vec.push_back(list1->val);
+            list1=list1->next;
+        }
+        while(list2) {
+            vec.push_back(list2->val);
+            list2=list2->next;
+        }
+        sort(vec.begin(),vec.end());
+        ListNode* result=new ListNode(-1);
+        ListNode* temp=result;
 
-        // for(int i=0; i<vec.size(); i++) {
-            //result->next=new ListNode(vec[i]);
-            //result=result->next;
-        // }
-        // return temp->next;
+        for(int i=0; i<vec.size(); i++) {
+            result->next=new ListNode(vec[i]);
+            result=result->next;
+        }
+        return temp->next;
     }
 };
