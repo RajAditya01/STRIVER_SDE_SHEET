@@ -6,42 +6,42 @@
 
 
 //efficient way
-// class Solution {
-// public:
-//     ListNode* middleNode(ListNode* head) {
-//         ListNode* slow=head;
-//         ListNode* fast=head;
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* slow=head;
+        ListNode* fast=head;
 
-//         while(fast!=NULL && fast->next!=NULL){
-//             slow=slow->next;
-//             fast=fast->next->next;
-//         }
-//         return slow;
-//     }
-// };
+        while(fast!=NULL && fast->next!=NULL){
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        return slow;
+    }
+};
 
 
 
 //Brute force approach
-// class Solution {
-// public:
-//     ListNode* middleNode(ListNode* head) {
-//         if(head==NULL){
-//             return head;
-//         }
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        if(head==NULL){
+            return head;
+        }
         
-//         int si=1;
-//         ListNode* temp=head;
-//         while(temp->next!=NULL){
-//             si++;
-//             temp=temp->next;
-//         }
-//         int s1=si/2;
-//         ListNode* temp1=head;
-//         while(s1 > 0){
-//             temp1=temp1->next;
-//             s1--;
-//         }
-//         return temp1;
-//     }
-// };
+        int si=1;
+        ListNode* temp=head;
+        while(temp->next!=NULL){
+            si++;
+            temp=temp->next;
+        }
+        int s1=si/2;
+        ListNode* temp1=head;
+        while(s1 > 0){
+            temp1=temp1->next;
+            s1--;
+        }
+        return temp1;
+    }
+};
