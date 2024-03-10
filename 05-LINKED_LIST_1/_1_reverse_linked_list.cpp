@@ -30,6 +30,7 @@ public:
     }
 };
 
+
 //Approach 2
 class Solution2 {
 public:
