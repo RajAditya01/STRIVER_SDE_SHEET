@@ -19,19 +19,19 @@ class Solution {
 public:
 
     //Using hashtable(set)
-    // bool hasCycle(ListNode *head) {
-    //     if(head==NULL){return 0;}
-    //     unordered_set<ListNode*>ss;
-    //     ListNode* l1=head;
-    //     while(l1){
-    //         if(ss.find(l1)!=ss.end()){
-    //             return 1;
-    //         }
-    //         ss.insert(l1);
-    //         l1=l1->next;
-    //     }
-    //     return 0;
-    // }
+    bool hasCycle(ListNode *head) {
+        if(head==NULL){return 0;}
+        unordered_set<ListNode*>ss;
+        ListNode* l1=head;
+        while(l1){
+            if(ss.find(l1)!=ss.end()){
+                return 1;
+            }
+            ss.insert(l1);
+            l1=l1->next;
+        }
+        return 0;
+    }
 
 
     //using two Pointers (slow & fast)
