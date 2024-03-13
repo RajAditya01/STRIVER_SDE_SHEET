@@ -23,28 +23,28 @@ struct ListNode {
 class Solution {
 public:
     //Using stack and using O(n)extra space
-    //ListNode* reverseKGroup(ListNode* head, int k) {
-    //     if(k==1 || head==NULL){return head;}
-    //     ListNode* l1=head;
-    //     while(l1){
-    //         stack<int>v;
-    //         int kk=k;
-    //         ListNode* temp=l1;
-    //         while(kk-- && temp){
-    //             v.push(temp->val);
-    //             temp=temp->next;
-    //         }
-    //         if(kk>=0){
-    //             break;
-    //         }
-    //         while(!v.empty()){
-    //             l1->val=v.top();
-    //             l1=l1->next;
-    //             v.pop();
-    //         }
-    //     }
-    //     return head;
-    // }
+    ListNode* reverseKGroup(ListNode* head, int k) {
+        if(k==1 || head==NULL){return head;}
+        ListNode* l1=head;
+        while(l1){
+            stack<int>v;
+            int kk=k;
+            ListNode* temp=l1;
+            while(kk-- && temp){
+                v.push(temp->val);
+                temp=temp->next;
+            }
+            if(kk>=0){
+                break;
+            }
+            while(!v.empty()){
+                l1->val=v.top();
+                l1=l1->next;
+                v.pop();
+            }
+        }
+        return head;
+    }
 
     //Using no extra space
     ListNode* reverseKGroup(ListNode* head,int k) {
