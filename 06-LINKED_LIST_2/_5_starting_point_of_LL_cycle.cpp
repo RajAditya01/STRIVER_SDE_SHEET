@@ -44,14 +44,14 @@ public:
 
 
     //using extra memory i.e.hashmap
-    // ListNode* detectCycle(ListNode* head) {
-    //     unordered_set<LisNode*> st;
-    //     while(head != NULL) {
-    //         if(st.find(head) != st.end()) return head;
-    //         st.insert(head);
-    //         head = head->next;
-    //     }
-    //     return NULL;
-    // }
+    ListNode* detectCycle(ListNode* head) {
+        unordered_set<LisNode*> st;
+        while(head != NULL) {
+            if(st.find(head) != st.end()) return head;
+            st.insert(head);
+            head = head->next;
+        }
+        return NULL;
+    }
 
 };
