@@ -41,24 +41,24 @@ public:
 
     //MY first approach:
     //it went right but something complex 😂
-    // ListNode* rotateRight(ListNode* head, int k) {
-    //     if(head==NULL || k==0){return head;}
-    //     ListNode* temp=head;
-    //     int size=0;
-    //     while(temp){temp=temp->next; size++;}
-    //     k=k%size;
-    //     if(k==0){return head;}
-    //     int t=size-k;
-    //     temp=head;
-    //     while(--t){
-    //         temp=temp->next;
-    //     }
-    //     ListNode* pre=temp->next;
-    //     temp->next=NULL;
-    //     ListNode* curr=pre;
-    //     while(curr->next!=NULL){
-    //         curr=curr->next;
-    //     }
+    ListNode* rotateRight(ListNode* head, int k) {
+        if(head==NULL || k==0){return head;}
+        ListNode* temp=head;
+        int size=0;
+        while(temp){temp=temp->next; size++;}
+        k=k%size;
+        if(k==0){return head;}
+        int t=size-k;
+        temp=head;
+        while(--t){
+            temp=temp->next;
+        }
+        ListNode* pre=temp->next;
+        temp->next=NULL;
+        ListNode* curr=pre;
+        while(curr->next!=NULL){
+            curr=curr->next;
+        }
     //     curr->next=head;
     //     head=pre;
     //     return head;
