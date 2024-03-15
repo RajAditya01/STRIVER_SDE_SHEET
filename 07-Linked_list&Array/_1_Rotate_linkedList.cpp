@@ -59,8 +59,8 @@ public:
         while(curr->next!=NULL){
             curr=curr->next;
         }
-    //     curr->next=head;
-    //     head=pre;
-    //     return head;
-    // }
+        curr->next=head;
+        head=pre;
+        return head;
+    }
 };
