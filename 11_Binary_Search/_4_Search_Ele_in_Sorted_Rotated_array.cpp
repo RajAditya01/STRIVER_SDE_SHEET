@@ -4,8 +4,6 @@
 
 //Leetcode:33  link:https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 
-
-
 #include<iostream>
 using namespace std;
 
