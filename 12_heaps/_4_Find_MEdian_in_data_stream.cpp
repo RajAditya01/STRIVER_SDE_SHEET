@@ -9,7 +9,6 @@
 
 //leetcode: 295  link: https://leetcode.com/problems/find-median-from-data-stream/description/
 
-
 #include<iostream>
 using namespace std;
 #include<queue>
