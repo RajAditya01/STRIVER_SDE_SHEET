@@ -38,7 +38,8 @@ public:
     //     return count;
     // }
     
-    
+
+
     //USing Z_index
 vector<int> ComputeZArray(string str){
 
