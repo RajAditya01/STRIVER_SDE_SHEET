@@ -43,7 +43,6 @@ class solution{
     }
     
     
-    
 //Tabulation (space optimised)
 //  int knapsack(vector<int>& wt, vector<int>& val, int n, int W){
 //       vector<vector<int>> dp(n,vector<int>(W+1,0));
