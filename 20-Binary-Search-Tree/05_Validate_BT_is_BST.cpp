@@ -12,7 +12,6 @@
 
 //Leetcode:98   link: https://leetcode.com/problems/validate-binary-search-tree/description/
 
-
 #include<iostream>
 using namespace std;
 
